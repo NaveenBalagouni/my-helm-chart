@@ -1,1 +1,19 @@
+apiVersion: v1
+entries:
+  mychart:
+  - apiVersion: v2
+    name: mychart
+    version: 0.1.0
+    description: A Helm chart for Kubernetes
+    urls:
+    - mychart-0.1.0.tgz
+    digest: sha256:...
+  another-chart:
+  - apiVersion: v2
+    name: another-chart
+    version: 0.1.0
+    description: Another Helm chart
+    urls:
+    - another-chart-0.1.0.tgz
+    digest: sha256:...
 
