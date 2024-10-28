@@ -7,7 +7,7 @@ entries:
       appVersion: "1.0"
       description: A Helm chart for my application
       urls:
-        - https://github.com/NaveenBalagouni/my-helm-chart/releases/download/1.0.0/my-helm-chart-1.0.0.tgz
+        - https://github.com/NaveenBalagouni/my-helm-chart/releases/download/0.1.0/my-helm-chart-0.1.0.tgz
       maintainers:
         - name: Your Name
           email: your.email@example.com
