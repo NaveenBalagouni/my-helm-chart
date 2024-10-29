@@ -9,7 +9,7 @@ entries:
       urls:
         - https://github.com/NaveenBalagouni/my-helm-charts/releases/download/0.1.0/my-helm-charts-0.1.0.tgz
       maintainers:
-        - name: Your Name
-          email: your.email@example.com
+        - name: Naveen
+          email: naveen.balagouni@opsmx.io
       created: 2024-10-28T00:00:00.000Z
-      digest: "<SHA256 checksum of the chart file>"
+      digest: shasum -a 256 my-helm-charts-0.1.0.tgz
