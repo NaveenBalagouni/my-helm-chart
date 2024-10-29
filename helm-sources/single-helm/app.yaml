@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: single-helm-sample
-    server: 'https://target-vcluster.gartner.opsmx.net:443'
+    server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart/'
     path: my-helm-charts/single-helm-sample
