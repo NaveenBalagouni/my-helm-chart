@@ -8,7 +8,7 @@ spec:
     namespace: single-helm-sample
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart/'
+    repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart'
     path: my-helm-charts/single-helm-sample
     targetRevision: HEAD
     helm:
