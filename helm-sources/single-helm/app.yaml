@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/NaveenBalagouni/my-helm-chart
-    path: my-helm-charts/single-helm-sample
+    path: my-helm-charts/single-helm-sample/template
     targetRevision: main
     helm:
       valueFiles:
-      - values.yaml
+      - my-helm-charts/single-helm-sample/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: single-helm
