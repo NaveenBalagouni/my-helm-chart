@@ -1,0 +1,10 @@
+{
+  "name": "my-helm-charts",
+  "project": "default",
+  "repoURL": "https://github.com/gopaljayanthi/helm-charts.git",
+  "targetRevision": "master",
+  "path": "my-helm-charts",
+  "valuesPath": "values.yaml",
+  "namespace": "appset",
+  "imageTag": "1.26.0"
+}
