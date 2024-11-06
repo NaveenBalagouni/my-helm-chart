@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-depl11
+  name: {{ .Release.Name }}-deployment
+  labels:
+    app: {{ .Release.Name }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: my-app
+        app: {{ .Release.Name }}
     spec:
       containers:
-        - name: nginx
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/bash", "-c", "while true; do echo mypod is running; sleep 5; done"]
+      - name: {{ .Release.Name }}
+        image: "nginx:latest"
+        ports:
+        - containerPort: 80
