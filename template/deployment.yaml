@@ -1,43 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mychart.fullname" . }}
-  labels:
-    app: {{ include "mychart.name" . }}
-    chart: {{ include "mychart.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+  name: my-single-helm-deploy
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "mychart.name" . }}
-      release: {{ .Release.Name }}
+      app: my-app
   template:
     metadata:
       labels:
-        app: {{ include "mychart.name" . }}
-        release: {{ .Release.Name }}
+        app: my-app
     spec:
       containers:
-      - name: {{ .Chart.Name }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        ports:
-        - containerPort: {{ .Values.service.port }}
-        livenessProbe:
-          httpGet:
-            path: /
-            port: {{ .Values.service.port }}
-        readinessProbe:
-          httpGet:
-            path: /
-            port: {{ .Values.service.port }}
-        resources:
-{{ toYaml .Values.resources | indent 10 }}
-      nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 8 }}
-      tolerations:
-{{ toYaml .Values.tolerations | indent 8 }}
-      affinity:
-{{ toYaml .Values.affinity | indent 8 }}
+        - name: nginx
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/bash", "-c", "while true; do echo mypod is running; sleep 5; done"]
