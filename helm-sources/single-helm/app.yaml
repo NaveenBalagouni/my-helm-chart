@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/NaveenBalagouni/my-helm-chart
-    path: my-helm-charts/single-helm-sample
+    path: my-helm-charts/single-helm-sample/Chart.yaml
     targetRevision: main
     helm:
       valueFiles:
