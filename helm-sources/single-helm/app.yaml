@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/NaveenBalagouni/my-helm-chart.git
+    repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
     path: my-helm-charts/single-helm-sample
     targetRevision: main
     helm:
