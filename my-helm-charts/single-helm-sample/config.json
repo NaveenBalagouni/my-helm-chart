@@ -3,7 +3,7 @@
   "project": "default",
   "repoURL": "https://github.com/NaveenBalagouni/my-helm-chart.git",
   "targetRevision": "main",
-  "path": "my-helm-charts",
+  "path": "my-helm-charts/single-helm-sample",
   "valuesPath": "values.yaml",
   "namespace": "single-helm",
   "imageTag": "1.26.0"
