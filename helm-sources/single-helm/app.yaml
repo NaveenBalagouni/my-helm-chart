@@ -11,7 +11,7 @@ spec:
     path: my-helm-charts/single-helm-sample
     helm:
       valueFiles:
-        - values-production.yaml
+        - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: single-helm
