@@ -3,7 +3,7 @@ entries:
   my-helm-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-08T09:52:05.6191959+05:30"
+    created: "2024-11-08T10:04:56.4708769+05:30"
     description: A Helm chart for Kubernetes
     digest: 26df2a1b84a5e4521d42bcb5e4b3def60df61e2949f4baa5c95ec11a129f0692
     name: my-helm-chart
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://NaveenBalagouni.github.io/my-helm-chart/my-helm-charts/my-helm-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-08T09:52:05.6051964+05:30"
+  my-helm-charts:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-08T10:04:56.470346+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 7587eee0c443bc7a21f6f4ef5bd58b529c9508927029e7d6e59adef60e7e0cdb
+    name: my-helm-charts
+    type: application
+    urls:
+    - https://NaveenBalagouni.github.io/my-helm-chart/my-helm-charts-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-08T10:04:56.4604542+05:30"
