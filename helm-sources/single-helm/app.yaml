@@ -4,18 +4,20 @@ metadata:
   name: single-helm-chart-app
   namespace: argocd
 spec:
-  project: default
+  destination:
+    namespace: single-helm
+    server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
-    path: my-helm-charts/single-helm
+    path: my-helm-chart/charts
     targetRevision: main
     helm:
       valueFiles:
         - values.yaml
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: single-helm
+  project: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
