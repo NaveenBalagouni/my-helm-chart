@@ -8,18 +8,18 @@ spec:
     namespace: double-helm
     server: 'https://kubernetes.default.svc'
   sources:
-    repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
-    path: my-helm-charts/single-helm-resources
-    targetRevision: main
-    helm:
-      valueFiles:
-        - values.yaml
-    repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
-    path: my-helm-charts/double-helm-resource
-    targetRevision: main
-    helm:
-      valueFiles:
-        - values.yaml
+    - repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
+      path: my-helm-charts/single-helm-resources
+      targetRevision: main
+      helm:
+        valueFiles:
+          - values.yaml
+    - repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
+      path: my-helm-charts/double-helm-resource
+      targetRevision: main
+      helm:
+        valueFiles:
+          - values.yaml
   project: default
   syncPolicy:
     automated:
