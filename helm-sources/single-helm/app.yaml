@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/NaveenBalagouni/my-helm-chart.git'
-    path: my-helm-charts/single-helm
+    path: my-helm-charts/single-helm/charts
     targetRevision: main
     helm:
       valueFiles:
